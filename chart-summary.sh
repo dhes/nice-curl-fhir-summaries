@@ -25,6 +25,9 @@ echo "  Fetching immunizations..."
 echo "  Fetching procedures..."
 "$DIR/procedures.sh" > /dev/null 2>&1
 
+echo "  Fetching colonoscopy surveillance..."
+"$DIR/colonoscopy.sh" > /dev/null 2>&1
+
 echo "  Fetching family history..."
 "$DIR/family-history.sh" > /dev/null 2>&1
 
@@ -61,6 +64,10 @@ echo "  Fetching care team..."
 
   echo "--- PROCEDURES ---"
   cat "$DIR/procedures-output.txt"
+  echo ""
+
+  echo "--- COLONOSCOPY SURVEILLANCE ---"
+  cat "$DIR/colonoscopy-output.txt"
   echo ""
 
   echo "--- FAMILY HISTORY ---"
